@@ -13,7 +13,7 @@ export default function Home() {
       const result = await signInWithPopup(auth, provider);
       const email = result.user.email;
 
-      if (email!.endsWith("@snu.edu.in")) {
+      if (email !== null && email !== undefined && email.endsWith("@snu.edu.in")) {
         setUser(result.user);
         setError("");
       } else {
