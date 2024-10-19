@@ -2,25 +2,33 @@
 
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebaseConfig";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { onAuthStateChanged } from "firebase/auth";
 import GoogleButton from "./components/GoogleButton";
-import { User as FirebaseUser } from "firebase/auth";
 
-export default function Home() {
-  const [user, setUser] = useState<FirebaseUser | null>(null);
-  const [error, setError] = useState<string>("");
+export default function Login() {
+  const [error, setError] = useState("");
   const router = useRouter();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user && user.email?.endsWith("@snu.edu.in")) {
+        router.push("/vote");
+      }
+    });
+
+    return () => unsubscribe();
+  }, [router]);
 
   const handleGoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
       const email = result.user.email;
 
-      if (email && email.endsWith("@snu.edu.in")) {
-        setUser(result.user);
+      if (email !== null && email !== undefined && email.endsWith("@snu.edu.in")) {
         setError("");
-        router.push("/home");
+        router.push("/vote");
       } else {
         setError("Please use your university email to sign in.");
       }
@@ -29,9 +37,9 @@ export default function Home() {
       setError("An error occurred during sign-in.");
     }
   };
+
   return (
     <div className="flex items-center justify-center min-h-screen">
-      {!user ? (
         <div
           className="border-4 border-black bg-white custom-rounded"
           style={{ width: 534, height: 310 }}
@@ -61,11 +69,6 @@ export default function Home() {
             )}
           </div>
         </div>
-      ) : (
-        <div>
-          <p>Redirecting...</p>
-        </div>
-      )}
     </div>
   );
 }
