@@ -46,10 +46,7 @@ export default function Login() {
     <div className="flex items-center justify-center min-h-screen">
       <div className="border-4 border-black bg-white custom-rounded login-outer-box">
         <div>
-          <div
-            className="flex space-x-4 mt-6"
-            style={{ marginLeft: 40, marginTop: 33 }}
-          >
+          <div className="flex space-x-4 mt-6 login-flex-space">
             <span className="text-black font-bold login-text-1 font-actor ">
               Hello,
             </span>
