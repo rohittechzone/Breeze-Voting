@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+    --background: #ffb700;
+    --foreground: #ededed;
+  }
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffb700;
@@ -49,4 +49,60 @@ body {
   font-weight: 200;
   font-size: 64px;
   color: #111111;
+}
+
+.login-outer-box {
+  width: 534px;
+  height: 300px;
+}
+
+.login-google-div {
+  width: 450px;
+  margin-left: 40px;
+}
+.login-flex-space {
+  margin-left: 40px;
+  margin-top: 33px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .login-outer-box {
+    width: 330px; /* Adjust to desired width */
+    height: 240px; /* Adjust height as needed */
+  }
+  .login-google-div {
+    width: 300px;
+    margin-left: 10px;
+  }
+  .login-text-1 {
+    text-align: center;
+    top: 71px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 40px;
+    margin-left: 10px;
+    color: #111111;
+  }
+  .login-text-2 {
+    text-align: center;
+    top: 71px;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 40px;
+    color: #111111;
+  }
+  .login-text-sub {
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 40px;
+    /* identical to box height */
+    color: #9a9a9a;
+  }
+  .login-flex-space {
+    margin-left: 7px;
+    margin-top: 33px;
+  }
 }
