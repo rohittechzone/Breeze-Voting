@@ -68,12 +68,12 @@ body {
 /* Mobile styles */
 @media (max-width: 768px) {
   .login-outer-box {
-    width: 390px; /* Adjust to desired width */
+    width: 370px; /* Adjust to desired width */
     height: 270px; /* Adjust height as needed */
   }
   .login-google-div {
     width: 340px;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .login-text-1 {
     text-align: center;
@@ -81,7 +81,7 @@ body {
     font-style: normal;
     font-weight: 200;
     font-size: 45px;
-    margin-left: 10px;
+    margin-left: 5px;
     color: #111111;
   }
   .login-text-2 {
@@ -102,7 +102,7 @@ body {
     color: #9a9a9a;
   }
   .login-flex-space {
-    margin-left: 20px;
+    margin-left: 10px;
     margin-top: 33px;
   }
 }
