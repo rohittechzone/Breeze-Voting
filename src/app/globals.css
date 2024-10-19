@@ -68,11 +68,11 @@ body {
 /* Mobile styles */
 @media (max-width: 768px) {
   .login-outer-box {
-    width: 360px; /* Adjust to desired width */
-    height: 270px; /* Adjust height as needed */
+    width: 330px; /* Adjust to desired width */
+    height: 240px; /* Adjust height as needed */
   }
   .login-google-div {
-    width: 330px;
+    width: 300px;
     margin-left: 10px;
   }
   .login-text-1 {
@@ -80,7 +80,7 @@ body {
     top: 71px;
     font-style: normal;
     font-weight: 200;
-    font-size: 45px;
+    font-size: 40px;
     margin-left: 10px;
     color: #111111;
   }
@@ -89,15 +89,15 @@ body {
     top: 71px;
     font-style: italic;
     font-weight: 200;
-    font-size: 45px;
+    font-size: 40px;
     color: #111111;
   }
   .login-text-sub {
     text-align: center;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     /* identical to box height */
     color: #9a9a9a;
   }
