@@ -10,12 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        loginBackground: "#FFB700",
         foreground: "var(--foreground)",
-      },
-      fontFamily: {
-        actor: ["Actor", "sans-serif"],
-        raleway: ["Raleway", "sans-serif"],
       },
     },
   },
