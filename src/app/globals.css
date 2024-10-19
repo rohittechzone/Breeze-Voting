@@ -50,3 +50,50 @@ body {
   font-size: 64px;
   color: #111111;
 }
+
+.login-outer-box {
+  width: 534px;
+  height: 300px;
+}
+
+.login-google-div {
+  width: 450px;
+  margin-left: 40px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .login-outer-box {
+    width: 434px; /* Adjust to desired width */
+    height: 270px; /* Adjust height as needed */
+  }
+  .login-google-div {
+    width: 350px;
+    margin-left: 40px;
+  }
+  .login-text-1 {
+    text-align: center;
+    top: 71px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 50px;
+    color: #111111;
+  }
+  .login-text-2 {
+    text-align: center;
+    top: 71px;
+    font-style: italic;
+    font-weight: 200;
+    font-size: 50px;
+    color: #111111;
+  }
+  .login-text-sub {
+    text-align: center;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    margin-bottom: 50px;
+    /* identical to box height */
+    color: #9a9a9a;
+  }
+}
