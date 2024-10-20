@@ -1,10 +1,23 @@
 @font-face { 
     font-family: 'vanguard'; 
-    src: url('fonts/vanguard.otf') format('opentype'); 
+    src: url('../fonts/vanguard.otf') format('opentype'); 
     font-weight: normal; 
     font-style: normal; 
  } 
 
+@font-face { 
+    font-family: 'Cedarville'; 
+    src: url('../fonts/cedarville.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+ }
+
+@font-face { 
+    font-family: 'Roboto'; 
+    src: url('../fonts/roboto.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+ }
 
 /* General Styles */
 * {
@@ -55,7 +68,7 @@ section {
     font-size: 2.5rem; /* Adjusted for mobile */
     color: white;
     margin-top: 0.5rem;
-    font-family: "Cedarville Cursive";
+    font-family: "Cedarville";
     font-weight: 400;
 }
 
@@ -89,7 +102,7 @@ section {
 .countdown-content .circle p {
     font-size: 2.4rem; /* Adjusted for mobile */
     color: white;
-    font-family: "Cedarville Cursive";
+    font-family: "Cedarville";
     font-weight: 400;
 }
 
