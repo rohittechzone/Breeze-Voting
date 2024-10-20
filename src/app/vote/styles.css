@@ -7,14 +7,14 @@
 
 @font-face { 
     font-family: 'Cedarville'; 
-    src: url('../fonts/cedarville.otf') format('opentype'); 
+    src: url('../fonts/cedarville.ttf') format('opentype'); 
     font-weight: normal; 
     font-style: normal; 
  }
 
 @font-face { 
     font-family: 'Roboto'; 
-    src: url('../fonts/roboto.otf') format('opentype'); 
+    src: url('../fonts/roboto.ttf') format('opentype'); 
     font-weight: normal; 
     font-style: normal; 
  }
