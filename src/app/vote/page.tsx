@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { auth } from "../../../firebaseConfig";
 import { onAuthStateChanged } from "firebase/auth";
 import Head from "next/head";
-import './style.css';
+import './styles.css';
 
 export default function Home() {
   const router = useRouter();
