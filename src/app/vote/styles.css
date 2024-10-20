@@ -1,0 +1,264 @@
+@font-face { 
+    font-family: 'vanguard'; 
+    src: url('fonts/vanguard.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+ } 
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Section Styles */
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements on smaller screens */
+}
+
+/* Section 1: Header */
+.header-section {
+    background-color: #FFB800;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
+.header-content h1 {
+    font-size: 8rem; /* Adjusted for mobile */
+    letter-spacing: 0.1rem;
+    font-family: 'vanguard', sans-serif;
+    color: #FF4E10;
+}
+
+.year {
+    color: #FF8A00;
+    letter-spacing: 0.5rem;
+    font-size: 8rem; /* Adjusted for mobile */
+    margin-top: -25px;
+    padding-left: 0.5rem;
+}
+
+.header-content p {
+    font-size: 2.5rem; /* Adjusted for mobile */
+    color: white;
+    margin-top: 0.5rem;
+    font-family: "Cedarville Cursive";
+    font-weight: 400;
+}
+
+/* Section 2: Countdown */
+.countdown-section {
+    background-color: #ff8b00;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
+.countdown-content .circle {
+    width: 30vh; /* Smaller on mobile */
+    height: 30vh;
+    background-color: #fda600;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.countdown-content .circle h2 {
+    font-size: 6rem; /* Adjusted for mobile */
+    color: #e94e1b;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+}
+
+.countdown-content .circle p {
+    font-size: 2.4rem; /* Adjusted for mobile */
+    color: white;
+    font-family: "Cedarville Cursive";
+    font-weight: 400;
+}
+
+.countdown-content p {
+    font-size: 2.4rem; /* Adjusted for mobile */
+    color: #FFE6A5;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Section 3: Voting Options */
+.voting-section {
+    background-color: white;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
+.voting-section h2 {
+    font-size: 4rem; /* Adjusted for mobile */
+    margin-bottom: 3rem;
+    color: #FF4E10;
+    font-family: "vanguard";
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column; /* Stack options on mobile */
+    gap: 3rem; /* Smaller gap on mobile */
+    align-items: center;
+}
+
+.option-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Limit the width */
+    transition: transform 0.3s;
+    margin-bottom: 2rem;
+}
+
+.box {
+    width: 30vh; /* Smaller box on mobile */
+    height: 30vh;
+    background-color: #ff8b00;
+    border-radius: 10px;
+}
+
+.option-card h3 {
+    color: #fff;
+    font-size: 1.2rem; /* Adjusted for mobile */
+    margin: 0.5rem;
+    background-color: #FABF12;
+    padding: 0.5rem 4vh;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    white-space: nowrap;
+}
+
+.option-card button {
+    padding: 0.5rem 1rem;
+    width: 15vh;
+    background-color: #ffffff;
+    border-color: #FF8A00;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.option-card button:hover {
+    background-color: #e94e1b;
+}
+
+.option-card:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+    .header-content h1 {
+        font-size: 10rem;
+    }
+
+    .year {
+        font-size: 10rem;
+    }
+
+    .header-content p {
+        font-size: 3.6rem;
+    }
+
+    .countdown-content .circle {
+        width: 40vh;
+        height: 40vh;
+    }
+
+    .countdown-content .circle h2 {
+        font-size: 7rem;
+    }
+
+    .countdown-content p {
+        font-size: 3.6rem;
+    }
+
+    .voting-section h2 {
+        font-size: 6rem;
+    }
+
+    .options-container {
+        flex-direction: row; /* Restore horizontal layout */
+        gap: 8rem;
+    }
+
+    .option-card {
+        width: 200px;
+    }
+
+    .box {
+        width: 35vh;
+        height: 35vh;
+    }
+
+    .option-card h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Media Queries for Desktop */
+@media (min-width: 1024px) {
+    .header-content h1 {
+        font-size: 12rem;
+    }
+
+    .year {
+        font-size: 12rem;
+    }
+
+    .header-content p {
+        font-size: 4.8rem;
+    }
+
+    .countdown-content .circle {
+        width: 50vh;
+        height: 50vh;
+    }
+
+    .countdown-content .circle h2 {
+        font-size: 10rem;
+    }
+
+    .countdown-content p {
+        font-size: 4rem;
+    }
+
+    .voting-section h2 {
+        font-size: 8rem;
+    }
+
+    .options-container {
+        gap: 16rem;
+    }
+
+    .box {
+        width: 40vh;
+        height: 40vh;
+    }
+}
