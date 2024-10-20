@@ -21,14 +21,13 @@ export default async function checkAndStoreChoice(userChoice: string) {
     const { data: existingVote, error: checkError } = await supabase
       .from('Votes')
       .select('*')
-      .eq('user_id', userId)
-      .single();
+      .eq('user_id', userId);
 
     if (checkError) {
       throw checkError;
     }
 
-    if (existingVote) {
+    if (existingVote.length > 0) {
       // User has already voted, sign them out
       throw new Error("You have already voted :')");
     }
