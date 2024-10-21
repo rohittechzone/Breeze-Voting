@@ -5,6 +5,8 @@ import checkAndStoreChoice from "@/server/voting";
 
 import localFont from "next/font/local";
 import { toast } from "@/hooks/use-toast";
+import Image from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 const acidg = localFont({
   src: "../fonts/FFF-AcidGrotesk-Normal-TRIAL.otf"
@@ -20,12 +22,12 @@ const handleVote = async (choice: string) => {
 };
 
 export default function Card({
-  src,
+  img,
   name,
   h,
   w,
 }: {
-  src?: string;
+  img: StaticImport;
   name: string;
   h: number;
   w: number;
@@ -33,7 +35,8 @@ export default function Card({
   return (
     <div className="flex flex-col gap-4 justify-center">
       <div className="overflow-hidden rounded-xl bg-black">
-        <ReactPlayer url={src} playing loop height={h} width={w} volume={0}  />
+        <Image src={img} height={h} width={w} alt="Theme image" />
+        {/* <ReactPlayer url={src} playing loop height={h} width={w} volume={0}  /> */}
       </div>
       <Button className={`${acidg.className} rounded-xl text-xl hover:bg-[#FF8A00] bg-[#FABF12]`}  onClick={()=>handleVote(name)}>{name}</Button>
     </div>
