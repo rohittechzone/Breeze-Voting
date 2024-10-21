@@ -359,7 +359,10 @@ export default function Home() {
       </div>
 
       <div className="min-h-[50vh] bg-white flex flex-col gap-4 justify-center items-center">
-        <div className={`${vanguard.className} text-8xl text-[#FF4E10] my-20 text-center`}>Here are your options</div>
+        <div className="">
+          <div className={`${vanguard.className} text-8xl text-[#FF4E10] my-20 text-center`}>Here are your options</div>
+          <div className={`${vanguard.className} text-4xl text-[#FF8A00] my-20 text-center`}>Press one of the yellow buttons to vote</div>
+        </div>
         <div className="flex flex-col lg:flex-row gap-4 justify-center items-center">
           <VotingCard
             src="https://vimeo.com/1021838035"
