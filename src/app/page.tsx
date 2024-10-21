@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import GoogleButton from "./components/GoogleButton";
+import { toast } from "@/hooks/use-toast";
+
 
 export default function Login() {
   const [error, setError] = useState("");
@@ -34,16 +36,16 @@ export default function Login() {
         setError("");
         router.push("/vote");
       } else {
-        setError("Please use your university email to sign in.");
+        toast({title: "Error trying to log in", description: "Please use your SNU email to sign in", variant: "destructive"})
       }
     } catch (err) {
       console.error(err);
-      setError("An error occurred during sign-in.");
+      toast({title: "Error trying to log in", description: "Please try again", variant: "destructive"})
     }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="flex items-center justify-center min-h-screen bg-[#FFB400]">
       <div className="border-4 border-black bg-white custom-rounded login-outer-box">
         <div>
           <div className="flex space-x-4 mt-6 login-flex-space">

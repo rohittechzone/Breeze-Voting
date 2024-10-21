@@ -1,3 +1,4 @@
+import { toast } from "@/hooks/use-toast";
 import { createClient } from "@supabase/supabase-js";
 import { getAuth, signOut } from "firebase/auth";
 
@@ -26,10 +27,9 @@ export default async function checkAndStoreChoice(userChoice: string) {
     if (checkError) {
       throw checkError;
     }
-
     if (existingVote.length > 0) {
       // User has already voted, sign them out
-      throw new Error("You have already voted :')");
+      toast({title: "Vote unsuccessful", description: "You have voted already", variant: "destructive"})
     }
 
     // User hasn't voted yet, store their choice
