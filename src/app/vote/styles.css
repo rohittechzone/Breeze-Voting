@@ -5,6 +5,13 @@
     font-style: normal; 
  } 
 
+ @font-face { 
+    font-family: 'cedarville'; 
+    src: url('fonts/cedarville.ttf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+ } 
+
 
 /* General Styles */
 * {
