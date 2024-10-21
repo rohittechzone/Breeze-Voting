@@ -39,14 +39,14 @@ export default function Home() {
 
   return (
     <div>
-      {user ? (
+      {/* {user ? (
         <div>
           <p>Welcome, {user.name} ({user.email})</p>
           <button onClick={signOut}>Sign out</button>
         </div>
       ) : (
         <p>Redirecting to login...</p>
-      )}
+      )} */}
 
       {/* Section 1*/}
       <section className="header-section">
