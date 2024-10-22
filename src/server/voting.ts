@@ -56,6 +56,7 @@ export async function get_votes(): Promise<number[]> {
   ans.push(x?x:0)
   x = (await supabase.from("Votes").select("vote", {count: "exact"}).eq("vote", "Modern Desi")).count
   ans.push(x?x:0)
-  ans.sort()
+  ans.sort((a, b) => a - b)
+  console.log(ans)
   return ans
 }
