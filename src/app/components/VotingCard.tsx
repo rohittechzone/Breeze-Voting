@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import ReactPlayer from "react-player/vimeo";
 
-import checkAndStoreChoice from "@/server/voting";
+import {checkAndStoreChoice} from "@/server/voting";
 
 import localFont from "next/font/local";
 import { toast } from "@/hooks/use-toast";

@@ -11,7 +11,7 @@ if (!supabaseUrl || !supabaseKey) {
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-export default async function checkAndStoreChoice(userChoice: string) {
+export async function checkAndStoreChoice(userChoice: string) {
   const auth = getAuth();
   const user = auth.currentUser;
 
@@ -23,7 +23,7 @@ export default async function checkAndStoreChoice(userChoice: string) {
       .from('Votes')
       .select('*')
       .eq('user_id', userId);
-
+    
     if (checkError) {
       throw checkError;
     }
@@ -48,3 +48,14 @@ export default async function checkAndStoreChoice(userChoice: string) {
   }
 }
 
+export async function get_votes(): Promise<number[]> {
+  let ans: number[] = []
+  let x = (await supabase.from("Votes").select("vote", {count: "exact"}).eq("vote", "90's Sensation")).count
+  ans.push(x?x:0)
+  x = (await supabase.from("Votes").select("vote", {count: "exact"}).eq("vote", "Techno-Cyberpunk")).count
+  ans.push(x?x:0)
+  x = (await supabase.from("Votes").select("vote", {count: "exact"}).eq("vote", "Modern Desi")).count
+  ans.push(x?x:0)
+  ans.sort()
+  return ans
+}
